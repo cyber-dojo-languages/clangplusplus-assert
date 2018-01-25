@@ -2,9 +2,6 @@ CXXFLAGS += -I. -std=c++1z -Wall -Wextra -Werror
 CXXFLAGS += -fsanitize=undefined -fno-sanitize-recover=undefined
 CXXFLAGS += -fno-omit-frame-pointer
 
-# currently ubuntu17.04 + clang++4.0 gives spurious Leak
-# warnings when the address sanitizer is enabled.
-
 HPP_FILES = $(wildcard *.hpp)
 COMPILED_HPP_FILES = $(patsubst %.hpp,%.compiled_hpp,$(HPP_FILES))
 CPP_FILES = $(wildcard *.cpp)
