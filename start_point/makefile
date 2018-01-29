@@ -1,5 +1,15 @@
 CXXFLAGS += -I. -std=c++1z -Wall -Wextra -Werror
-CXXFLAGS += -fsanitize=undefined -fno-sanitize-recover=undefined
+CXXFLAGS +=	-Wshadow
+CXXFLAGS +=	-Wfloat-equal
+CXXFLAGS +=	-O
+CXXFLAGS += -Wsequence-point
+CXXFLAGS += -Wmissing-noreturn
+CXXFLAGS += -Wunreachable-code
+CXXFLAGS += -Wmissing-prototypes
+CXXFLAGS += -Wstrict-prototypes
+
+CXXFLAGS += -fsanitize=address
+CXXFLAGS += -fno-sanitize-recover=undefined
 CXXFLAGS += -fno-omit-frame-pointer
 
 HPP_FILES = $(wildcard *.hpp)
